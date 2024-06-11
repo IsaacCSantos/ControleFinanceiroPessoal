@@ -8,7 +8,7 @@ uses
   Vcl.ComCtrls;
 
 type
-  TForm1 = class(TForm)
+  TFormLogin = class(TForm)
     PageControl1: TPageControl;
     TabSheet1: TTabSheet;
     TabSheet2: TTabSheet;
@@ -27,7 +27,7 @@ type
   end;
 
 var
-  Form1: TForm1;
+  FormLogin: TFormLogin;
 
 implementation
 

@@ -1,17 +1,19 @@
-unit UnitCategoria;
+unit Usuario;
 
 interface
 
 type
-  TCategoria = class
+  TUsuario = class
   private
     FId: Integer;
     FNome: string;
-    FTipo: string;
+    FEmail: string;
+    FSenha: string;
   public
     property Id: Integer read FId write FId;
     property Nome: string read FNome write FNome;
-    property Tipo: string read FTipo write FTipo;
+    property Email: string read FEmail write FEmail;
+    property Senha: string read FSenha write FSenha;
   end;
 
 implementation

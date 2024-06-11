@@ -8,7 +8,7 @@ uses
   UnitDataModule in 'src\datamodules\UnitDataModule.pas' {DataModuleConexao: TDataModule},
   UnitFormMain in 'src\views\Main\UnitFormMain.pas' {FormMain},
   Utils in 'src\utils\Utils.pas',
-  UnitFormLogin in 'src\views\Login\UnitFormLogin.pas' {Form1};
+  UnitFormLogin in 'src\views\Login\UnitFormLogin.pas' {FormLogin};
 
 {$R *.res}
 
@@ -17,6 +17,6 @@ begin
   Application.MainFormOnTaskbar := True;
   Application.CreateForm(TDataModuleConexao, DataModuleConexao);
   Application.CreateForm(TFormMain, FormMain);
-  Application.CreateForm(TForm1, Form1);
+  Application.CreateForm(TFormLogin, FormLogin);
   Application.Run;
 end.
