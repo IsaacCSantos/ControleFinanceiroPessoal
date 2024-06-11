@@ -1,0 +1,20 @@
+program ControleFinanceiro;
+
+uses
+  Vcl.Forms,
+  UnitFormLogin in 'View\UnitFormLogin.pas' {FormLogin},
+  UnitFormPrincipal in 'View\UnitFormPrincipal.pas' {FormPrincipal},
+  UnitFormRegister in 'View\UnitFormRegister.pas' {FormRegister},
+  Categoria in 'src\models\Categoria.pas',
+  CategoriaController in 'src\controllers\CategoriaController.pas',
+  UnitFormCategorias in 'src\views\Categorias\UnitFormCategorias.pas' {FormCategorias};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TFormPrincipal, FormPrincipal);
+  Application.CreateForm(TFormCategorias, FormCategorias);
+  Application.Run;
+end.

@@ -2,21 +2,21 @@ program ControleFinanceiro;
 
 uses
   Vcl.Forms,
+  UnitFormLogin in 'View\UnitFormLogin.pas' {FormLogin},
+  UnitFormPrincipal in 'View\UnitFormPrincipal.pas' {FormPrincipal},
+  UnitFormRegister in 'View\UnitFormRegister.pas' {FormRegister},
   Categoria in 'src\models\Categoria.pas',
   CategoriaController in 'src\controllers\CategoriaController.pas',
   UnitFormCategorias in 'src\views\Categorias\UnitFormCategorias.pas' {FormCategorias},
-  UnitDataModule in 'src\datamodules\UnitDataModule.pas' {DataModuleConexao: TDataModule},
-  UnitFormMain in 'src\views\Main\UnitFormMain.pas' {FormMain},
-  Utils in 'src\utils\Utils.pas',
-  UnitFormLogin in 'src\views\Login\UnitFormLogin.pas' {Form1};
+  UnitDataModule in 'src\datamodules\UnitDataModule.pas' {DataModuleConexao: TDataModule};
 
 {$R *.res}
 
 begin
   Application.Initialize;
   Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TFormPrincipal, FormPrincipal);
+  Application.CreateForm(TFormCategorias, FormCategorias);
   Application.CreateForm(TDataModuleConexao, DataModuleConexao);
-  Application.CreateForm(TFormMain, FormMain);
-  Application.CreateForm(TForm1, Form1);
   Application.Run;
 end.
